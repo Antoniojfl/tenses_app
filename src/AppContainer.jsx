@@ -8,7 +8,13 @@ const AppContainer = () => {
     const [jsonData,setData] = useState({})
       const fetchData = async () => {
         try {
-          const response = await fetch(`${BASE_URL}/api/v1/quiz/random`);
+          const response = await fetch(`${BASE_URL}/api/v1/quiz/random`, {
+            method: "GET",
+            headers: {
+              "Content-type": "application/json;charset=UTF-8",
+              "ngrok-skip-browser-warning": true
+            }
+          });
           const jsonData = await response.json();
           console.log('data',jsonData.data)
           setData(jsonData.data);
