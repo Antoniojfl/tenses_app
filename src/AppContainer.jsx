@@ -2,11 +2,13 @@ import {useEffect, useState} from 'react'
 import App from './App'
 import './App.css'
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
+
 const AppContainer = () => {
     const [jsonData,setData] = useState({})
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:3000/api/v1/quiz/random');
+          const response = await fetch(`${BASE_URL}/api/v1/quiz/random`);
           const jsonData = await response.json();
           console.log('data',jsonData.data)
           setData(jsonData.data);
@@ -14,7 +16,7 @@ const AppContainer = () => {
           console.error('Error fetching data:', error);
         }
       };
-
+      console.log('url: ',`${BASE_URL}/api/v1/quiz/random`)
     useEffect(() => {    
         fetchData();
       }, []);
