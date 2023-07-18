@@ -54,10 +54,10 @@ html {
   font-weight: 500;
 }
 .home-container3 {
-  flex: 0 0 auto;
   width: 1072px;
   height: 85px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -74,27 +74,21 @@ html {
 .home-button:hover {
   background-color:  #32A94C;
 }
-.home-button1 {
-  transition: 0.3s;
+
+@media (max-width: 900px) {
+  .home-container2 {
+    width: 100%;
+    max-width: 600px;
+    margin: 32px;
+  }
+  .home-container3 {
+    width: 100%;
+    max-width: 1072px;
+  }
 }
-.home-button1:hover {
-  background-color: #32A94C;
-}
-.home-button2 {
-  transition: 0.3s;
-}
-.home-button2:hover {
-  background-color: #32A94C;
-}
-.home-button3 {
-  transition: 0.3s;
-}
-.home-button3:hover {
-  background-color: #32A94C;
-}
-.home-button4 {
-  transition: 0.3s;
-}
-.home-button4:hover {
-  background-color: #32A94C;
+
+@media (max-width: 600px) {
+  .home-container2 {
+    margin: 16px;
+  }
 }

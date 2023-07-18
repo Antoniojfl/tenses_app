@@ -18,7 +18,7 @@ const App = ({data, updateQuiz}) => {
   return (
     <div className="home-container">
       <div className="home-container1">
-        <span className="home-text">Master the tenses.</span>
+        <span className="home-text">Master The Tenses</span>
       </div>
       <div className="home-container2">
         <span className="home-text1">{data.sentence}</span>
